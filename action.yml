@@ -1,0 +1,12 @@
+name: 'Email Validator'
+description: 'Validates that a provider variable is a valid email.'
+inputs:
+  email:
+    description: 'Email(s) to check'
+    required: true
+outputs:
+  results: 
+    description: 'The results of the check(s), in the form `[{email: valid: [true|false]}]`'
+runs:
+  using: node16
+  main: 'index.js'
