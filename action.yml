@@ -1,6 +1,6 @@
 name: 'Email Validator'
 author: kylesoskin
-description: 'Validates that a provider variable is a valid email.'
+description: 'Validates that a provided email (or list of emails) is a valid email.'
 inputs:
   email:
     description: 'Single email address or a comma seperated email list of multiple emails to check.'
