@@ -48,3 +48,29 @@ uses: kylesoskin/email-validation-github-action@v2
 with:
   email: ${{ env.EMAIL }}
 ```
+
+
+Full working workflow example 
+
+```
+# This is a basic workflow to help you get started with this action
+
+name: Test email validation action
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  workflow_dispatch:
+    inputs:
+      email:
+        description: 'Email'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kylesoskin/email-validation-github-action@v2
+        with: 
+          email: ${{ github.event.inputs.email }}
+```
