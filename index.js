@@ -4,10 +4,9 @@ const github = require('@actions/github');
 try {
   // `email` input defined in action metadata file
   const emails = core.getInput('email');
-  console.log(`Hello ${emails}!`);
-  const time = (new Date()).toTimeString();
-  // core.setOutput("time", time);
-  // Get the JSON webhook payload for the event that triggered the workflow
+  for (const email in emails) {
+    console.log(`Email: ${email}`);
+  }
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
 } catch (error) {
