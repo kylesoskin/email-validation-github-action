@@ -16,19 +16,19 @@ The results in the form `[{email: [true|false]}]`'
 ## Example usage
 
 ```
-uses: kylesoskin/email-validation-github-action
+uses: kylesoskin/email-validation-github-action@v2
 with:
   email: 'test@email.com'
 ```
 
 ```
-uses: kylesoskin/email-validation-github-action
+uses: kylesoskin/email-validation-github-action@v2
 with:
   email: 'test@email.com, otheremailtocheck'
 ```
 
 ```
-uses: kylesoskin/email-validation-github-action
+uses: kylesoskin/email-validation-github-action@v2
 with:
   email: ${{ env.EMAIL }}
 ```
