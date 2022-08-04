@@ -1,5 +1,5 @@
 # email-validation-github-action
-A GitHub action to check whether a provided variable is a valid email or not.
+A GitHub action to check whether provided variable(s) are valid emails or not.
 
 ## Inputs
 
@@ -11,7 +11,7 @@ A GitHub action to check whether a provided variable is a valid email or not.
 
 ## `results`
 
-The results
+The results in the form `[{email: valid: [true|false]}]`'
 
 ## Example usage
 
