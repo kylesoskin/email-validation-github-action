@@ -11,7 +11,7 @@ A GitHub action to check whether provided variable(s) are valid emails or not.
 
 ## `results`
 
-The results in the form `[{email: valid: [true|false]}]`'
+The results in the form `[{email: [true|false]}]`'
 
 ## Example usage
 
@@ -24,7 +24,7 @@ with:
 ```
 uses: kylesoskin/email-validation-github-action
 with:
-  email: ['test@email.com', 'otheremailtocheck']
+  email: 'test@email.com, otheremailtocheck'
 ```
 
 ```

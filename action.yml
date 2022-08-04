@@ -6,7 +6,7 @@ inputs:
     required: true
 outputs:
   results: 
-    description: 'The results of the check(s), in the form `[{email: valid: [true|false]}]`'
+    description: 'The results of the check(s), in the form `[{email: [true|false]}]`'
 runs:
   using: node16
   main: 'index.js'
