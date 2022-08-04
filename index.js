@@ -11,7 +11,7 @@ try {
   // init the return status (default is true)
   let successful = true
   
-  for (const email in emails) {
+  for (const email of emails) {
     console.log(`Validating: ${email}`);
     let res = validator.isEmail(email)
     results[email] = res
