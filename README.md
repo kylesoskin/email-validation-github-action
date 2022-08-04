@@ -15,15 +15,20 @@ The results in the form `[{email: valid: [true|false]}]`'
 
 ## Example usage
 
+```
 uses: kylesoskin/email-validation-github-action
 with:
   email: 'test@email.com'
+```
 
+```
 uses: kylesoskin/email-validation-github-action
 with:
   email: ['test@email.com', 'otheremailtocheck']
+```
 
+```
 uses: kylesoskin/email-validation-github-action
 with:
   email: ${{ env.EMAIL }}
-
+```
