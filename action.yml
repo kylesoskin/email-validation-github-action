@@ -1,12 +1,16 @@
 name: 'Email Validator'
+author: kylesoskin
 description: 'Validates that a provider variable is a valid email.'
 inputs:
   email:
-    description: 'Email(s) to check'
+    description: 'Single email address or a comma seperated email list of multiple emails to check.'
     required: true
 outputs:
   results: 
-    description: 'The results of the check(s), in the form `[{email: [true|false]}]`'
+    description: 'The results of the check(s), returned as a JSON string in the form `[ {email: [true|false]} ]`'
+branding:
+  icon: check-square
+  color: purple
 runs:
   using: node16
   main: 'index.js'
