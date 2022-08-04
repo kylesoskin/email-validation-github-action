@@ -11,7 +11,23 @@ A GitHub action to check whether provided variable(s) are valid emails or not.
 
 ## `results`
 
-The results in the form `[{email: [true|false]}]`'
+The results in the form `[{${email}: [true|false]}]`
+
+For example
+
+```
+input: 'test@example.com, test2@example.com, not_an_email'
+```
+Would produce a result/GitHub output of
+```
+output: '[{"test@example.com":true},{"test2@example.com":true},{"not_an_email":false}]'
+```
+Which can be used in upstream Github actions by doing something like 
+```
+JSON.parse(github.email_validate_step.outputs.results)
+```
+
+Although most of the time if you just need to know if a single email is valid or not you can just rely on the job failing when it is not OR by checking the success value of the validation step.
 
 ## Example usage
 
